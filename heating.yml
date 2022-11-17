@@ -79,7 +79,7 @@ action:
           - condition: or
             conditions:
               - condition: state
-                entity_id: !input 'person1'
+                entity_id: !input 'person'
                 state: home
         sequence:
           - service: climate.set_temperature
