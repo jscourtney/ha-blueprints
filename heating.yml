@@ -23,37 +23,30 @@ blueprint:
       selector:
         entity:
           domain: person
-    person2:
-      name: Person 2
-      description: The second person that has to be home.
-      default: []
-      selector:
-        entity:
-          domain: person
     min_temp:
       name: Minimum Temp
       description: If temperature is below this value and someone is home, It turns heating on.
-      default: 15
+      default: 68
       selector:
         number:
-          min: 15
-          max: 25
+          min: 50
+          max: 80
           step: 1
           mode: slider
     set_temp:
       name: Temperature Target
       description: If the heating turns on, It heats to this target temperature.
-      default: 20
+      default: 70
       selector:
         number:
-          min: 15
-          max: 25
+          min: 50
+          max: 80
           step: 1
           mode: slider
     time_after:
       name: Time After
       description: After this time the heating turns on, so it's warm in the morning
-      default: '07:30:00'
+      default: '06:00:00'
       selector:
         time:
     time_before:
@@ -87,9 +80,6 @@ action:
             conditions:
               - condition: state
                 entity_id: !input 'person1'
-                state: home
-              - condition: state
-                entity_id: !input 'person2'
                 state: home
         sequence:
           - service: climate.set_temperature
