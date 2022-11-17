@@ -16,8 +16,8 @@ blueprint:
         entity:
           domain: sensor
           device_class: temperature
-    person:
-      name: Person
+    person1:
+      name: Person 1
       description: The first person that has to be home.
       default: []
       selector:
@@ -79,7 +79,7 @@ action:
           - condition: or
             conditions:
               - condition: state
-                entity_id: !input 'person'
+                entity_id: !input 'person1'
                 state: home
         sequence:
           - service: climate.set_temperature
