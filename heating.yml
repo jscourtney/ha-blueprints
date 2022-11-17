@@ -23,13 +23,6 @@ blueprint:
       selector:
         entity:
           domain: person
-    person2:
-      name: Person 2
-      description: The second person that has to be home.
-      default: []
-      selector:
-        entity:
-          domain: person
     min_temp:
       name: Minimum Temp
       description: If temperature is below this value and someone is home, It turns heating on.
