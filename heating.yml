@@ -18,7 +18,7 @@ blueprint:
           device_class: temperature
     person1:
       name: Person 1
-      description: The first person that has to be home.
+      description: The person that has to be home.
       default: []
       selector:
         entity:
