@@ -24,7 +24,7 @@ trigger:
   - platform: time_pattern
     hours: '*'
     minutes: '*'
-    seconds: '/1'
+    seconds: '/5'
 
 action:
   - service: light.turn_on
