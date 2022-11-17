@@ -16,8 +16,8 @@ blueprint:
         entity:
           domain: sensor
           device_class: temperature
-    person1:
-      name: Person 1
+    person:
+      name: Person
       description: The first person that has to be home.
       default: []
       selector:
